@@ -28,6 +28,7 @@
       <a href="#hours">Hours</a>
       <a href="#reviews">Reviews</a>
       <a href="#contact">Contact</a>
+      <a href="#message">Message Us</a>
     </nav>
 
     <div class="header-actions">
@@ -237,6 +238,36 @@
           referrerpolicy="no-referrer-when-downgrade">
         </iframe>
       </div>
+    </div>
+  </section>
+
+  <!-- MESSAGE FORM -->
+  <section class="section section-alt" id="message">
+    <div class="container">
+      <p class="eyebrow center">Get In Touch</p>
+      <h2 class="center">Send Us a Message</h2>
+      <p class="section-lede center">Prefer not to call? Send us your details and we'll get back to you.</p>
+
+      <form class="contact-form" id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <div class="form-row">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" autocomplete="name" required>
+        </div>
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" autocomplete="email" required>
+        </div>
+        <div class="form-row">
+          <label for="phone">Phone (optional)</label>
+          <input type="tel" id="phone" name="phone" autocomplete="tel">
+        </div>
+        <div class="form-row">
+          <label for="messageText">Message</label>
+          <textarea id="messageText" name="message" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
+        <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+      </form>
     </div>
   </section>
 
