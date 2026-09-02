@@ -48,43 +48,24 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  var reviewBars = document.querySelectorAll(".bar i[data-width]");
-  reviewBars.forEach(function (bar) {
-    bar.style.width = "0";
-  });
-  if ("IntersectionObserver" in window && reviewBars.length) {
-    var barObserver = new IntersectionObserver(
-      function (entries, observer) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            entry.target.style.width = entry.target.getAttribute("data-width");
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.4 }
-    );
-    reviewBars.forEach(function (bar) {
-      barObserver.observe(bar);
-    });
-  } else {
-    reviewBars.forEach(function (bar) {
-      bar.style.width = bar.getAttribute("data-width");
-    });
-  }
-
   // Safety net: guarantee everything is visible even if a scroll-triggered
   // observer never fires (fast scrollers, crawlers, odd viewport states).
   setTimeout(function () {
     revealTargets.forEach(function (el) {
       el.classList.add("in-view");
     });
-    reviewBars.forEach(function (bar) {
-      if (bar.style.width === "0px" || bar.style.width === "0") {
-        bar.style.width = bar.getAttribute("data-width");
-      }
-    });
   }, 2500);
+
+  var header = document.querySelector(".site-header");
+  var heroSection = document.querySelector(".hero-v2");
+  if (header && heroSection) {
+    var setHeaderState = function () {
+      var threshold = heroSection.offsetHeight - 100;
+      header.classList.toggle("scrolled", window.scrollY > threshold);
+    };
+    setHeaderState();
+    window.addEventListener("scroll", setHeaderState, { passive: true });
+  }
 
   var form = document.getElementById("contactForm");
   var status = document.getElementById("formStatus");

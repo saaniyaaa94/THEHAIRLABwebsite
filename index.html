@@ -47,132 +47,140 @@
 <main id="main">
 
   <!-- HERO -->
-  <section class="hero">
-    <div class="hero-bg" aria-hidden="true"></div>
-    <svg class="hero-flourish" aria-hidden="true" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-      <path d="M40,300 C160,120 260,480 380,300 S560,120 580,260" fill="none" stroke="currentColor" stroke-width="1.5"/>
-      <circle cx="580" cy="260" r="4" fill="currentColor"/>
-      <circle cx="40" cy="300" r="4" fill="currentColor"/>
-    </svg>
-    <div class="container hero-inner">
-      <p class="eyebrow reveal">Epsom, Auckland</p>
-      <h1 class="reveal">The Hair Lab <span>La Tonique</span></h1>
-      <div class="title-ornament reveal" aria-hidden="true"><span class="line"></span><span class="dot"></span><span class="line"></span></div>
-      <p class="hero-tagline reveal">Precision cuts, colour &amp; care — a neighbourhood hair studio Epsom trusts.</p>
-
-      <div class="hero-rating reveal" aria-label="4.9 out of 5 stars from 61 Google reviews">
-        <span class="stars" aria-hidden="true">★★★★★</span>
-        <span class="hero-rating-text"><strong>4.9</strong> · 61 Google reviews</span>
+  <section class="hero-v2" id="hero-top">
+    <div class="container hero-v2-grid">
+      <div class="hero-v2-copy">
+        <p class="eyebrow eyebrow-light reveal">Epsom &middot; Auckland</p>
+        <h1 class="hero-v2-title reveal">The Hair Lab<em>La Tonique</em></h1>
+        <p class="hero-v2-tagline reveal">Precision cuts, considered colour, and a studio that takes the time to
+          get your hair right.</p>
+        <div class="hero-ctas reveal" style="justify-content:flex-start;">
+          <a class="btn btn-primary btn-lg" href="https://book.mase.cloud/" target="_blank" rel="noopener">Book Now Online</a>
+          <a class="btn btn-outline-light btn-lg" href="https://www.google.com/maps/dir/?api=1&destination=239+Manukau+Road%2C+Epsom%2C+Auckland+1023%2C+New+Zealand" target="_blank" rel="noopener">Get Directions</a>
+        </div>
+        <p class="hero-v2-meta reveal">239 Manukau Road, Epsom &nbsp;&middot;&nbsp; Open today until 6pm</p>
       </div>
-
-      <div class="hero-ctas reveal">
-        <a class="btn btn-primary btn-lg" href="https://book.mase.cloud/" target="_blank" rel="noopener">Book Now Online</a>
-        <a class="btn btn-outline btn-lg" href="https://www.google.com/maps/dir/?api=1&destination=239+Manukau+Road%2C+Epsom%2C+Auckland+1023%2C+New+Zealand" target="_blank" rel="noopener">Get Directions</a>
+      <div class="hero-v2-visual reveal" aria-hidden="true">
+        <svg class="hero-emblem" viewBox="0 0 240 240">
+          <circle cx="120" cy="120" r="112" fill="none" stroke="currentColor" stroke-width="1"/>
+          <circle cx="120" cy="120" r="96" fill="none" stroke="currentColor" stroke-width="1"/>
+          <path d="M60 145 C75 90 95 55 120 30" fill="none" stroke="currentColor" stroke-width="1.3"/>
+          <path d="M180 145 C165 90 145 55 120 30" fill="none" stroke="currentColor" stroke-width="1.3"/>
+          <g fill="currentColor">
+            <ellipse cx="70" cy="128" rx="9" ry="4.5" transform="rotate(-55 70 128)"/>
+            <ellipse cx="80" cy="102" rx="9" ry="4.5" transform="rotate(-70 80 102)"/>
+            <ellipse cx="95" cy="75" rx="9" ry="4.5" transform="rotate(-85 95 75)"/>
+            <ellipse cx="170" cy="128" rx="9" ry="4.5" transform="rotate(55 170 128)"/>
+            <ellipse cx="160" cy="102" rx="9" ry="4.5" transform="rotate(70 160 102)"/>
+            <ellipse cx="145" cy="75" rx="9" ry="4.5" transform="rotate(85 145 75)"/>
+          </g>
+          <g transform="translate(120 128)" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" fill="none">
+            <circle cx="-30" cy="12" r="9"/>
+            <circle cx="-30" cy="-34" r="9"/>
+            <line x1="34" y1="-46" x2="-16" y2="4"/>
+            <line x1="-16" y1="-22" x2="34" y2="28"/>
+          </g>
+        </svg>
       </div>
-
-      <p class="hero-meta reveal">239 Manukau Road, Epsom, Auckland 1023 &nbsp;·&nbsp; Open today until 6pm</p>
     </div>
-    <svg class="section-divider" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0,20 C360,90 1080,-10 1440,40 L1440,80 L0,80 Z" fill="var(--cream)"/></svg>
+    <div class="hero-v2-badge reveal" aria-label="4.9 out of 5 stars from 61 Google reviews">
+      <span class="stars" aria-hidden="true">★★★★★</span>
+      <span><strong>4.9</strong>&nbsp;out of 5 &middot; 61 Google reviews &middot; Open 6 days a week</span>
+    </div>
   </section>
 
   <!-- ABOUT -->
-  <section class="section" id="about">
-    <div class="container about-grid">
-      <div class="about-copy reveal">
-        <p class="eyebrow">About Us</p>
-        <h2>A hair studio built on craft and care</h2>
-        <div class="title-ornament left" aria-hidden="true"><span class="line"></span><span class="dot"></span></div>
+  <section class="section about-v2" id="about">
+    <div class="container about-v2-grid">
+      <p class="about-v2-label reveal">About&nbsp;Us</p>
+      <div class="about-v2-body reveal">
+        <p class="about-v2-statement">A hair studio built on craft and care.</p>
         <p>Tucked into Manukau Road in Epsom, The Hair Lab (La Tonique) is a full-service hairdresser known for
           precision cutting, considered colour work and a warm, unhurried studio experience. Our stylists take the
           time to understand your hair, your lifestyle and what actually works between appointments — not just what
           looks good in the chair.</p>
-        <p>We're proud to be rated <strong>4.9 out of 5</strong> across <strong>61 Google reviews</strong> from our
-          Epsom and wider Auckland clients.</p>
         <div class="badge-row">
           <span class="badge">Hairdresser</span>
           <span class="badge">Colour &amp; Balayage Specialists</span>
           <span class="badge">Walk-ins Welcome*</span>
         </div>
       </div>
-      <div class="about-panel reveal">
-        <div class="rating-card">
-          <div class="laurel-row" aria-hidden="true">
-            <svg class="laurel" viewBox="0 0 60 100" fill="currentColor"><path d="M55 6C40 14 32 30 32 48c0 16 8 30 8 30l4-3s-6-13-6-27c0-16 7-30 20-38l-3-4z"/><ellipse cx="45" cy="18" rx="6" ry="3" transform="rotate(-35 45 18)"/><ellipse cx="38" cy="34" rx="6" ry="3" transform="rotate(-55 38 34)"/><ellipse cx="34" cy="52" rx="6" ry="3" transform="rotate(-80 34 52)"/><ellipse cx="36" cy="70" rx="6" ry="3" transform="rotate(-100 36 70)"/></svg>
-            <div class="rating-score">4.9</div>
-            <svg class="laurel laurel-flip" viewBox="0 0 60 100" fill="currentColor"><path d="M55 6C40 14 32 30 32 48c0 16 8 30 8 30l4-3s-6-13-6-27c0-16 7-30 20-38l-3-4z"/><ellipse cx="45" cy="18" rx="6" ry="3" transform="rotate(-35 45 18)"/><ellipse cx="38" cy="34" rx="6" ry="3" transform="rotate(-55 38 34)"/><ellipse cx="34" cy="52" rx="6" ry="3" transform="rotate(-80 34 52)"/><ellipse cx="36" cy="70" rx="6" ry="3" transform="rotate(-100 36 70)"/></svg>
-          </div>
-          <div class="stars" aria-hidden="true">★★★★★</div>
-          <p>from 61 reviews</p>
-          <a href="https://search.google.com/local/reviews?placeid=&q=The%20Hair%20Lab%20La%20Tonique%20239%20Manukau%20Road%20Epsom%20Auckland" target="_blank" rel="noopener" class="link-arrow">Read our Google reviews →</a>
-        </div>
-      </div>
     </div>
-    <svg class="section-divider" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0,40 C360,-10 1080,90 1440,20 L1440,80 L0,80 Z" fill="var(--white)"/></svg>
   </section>
 
   <!-- SERVICES -->
-  <section class="section section-alt" id="services">
+  <section class="section" id="services">
     <div class="container">
-      <p class="eyebrow center">What We Do</p>
-      <h2 class="center">Services</h2>
-      <div class="title-ornament reveal" aria-hidden="true"><span class="line"></span><span class="dot"></span><span class="line"></span></div>
-      <p class="section-lede center">A snapshot of what we offer in-studio. Get in touch for full pricing and to find
-        the right service for your hair.</p>
+      <div class="services-head reveal">
+        <p class="eyebrow">What We Do</p>
+        <h2>Services</h2>
+      </div>
 
-      <div class="services-grid">
-        <article class="service-card reveal">
-          <span class="service-num" aria-hidden="true">01</span>
-          <div class="service-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="2.5"/><circle cx="6" cy="18" r="2.5"/><line x1="20" y1="4" x2="8.5" y2="15.5"/><line x1="8.5" y1="8.5" x2="20" y2="20"/></svg>
+      <div class="service-list">
+        <div class="service-row reveal">
+          <span class="service-row-num">01</span>
+          <div class="service-row-body">
+            <h3>Cut &amp; Style</h3>
+            <p>Precision haircuts and finishing styles tailored to your face shape and texture.</p>
           </div>
-          <h3>Cut &amp; Style</h3>
-          <p>Precision haircuts and finishing styles tailored to your face shape and texture.</p>
-        </article>
-        <article class="service-card reveal">
-          <span class="service-num" aria-hidden="true">02</span>
-          <div class="service-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 1 0 0 18c1.1 0 1.6-.6 1.6-1.4 0-.4-.2-.7-.4-1-.3-.3-.4-.6-.4-1 0-.8.7-1.4 1.5-1.4H16a5 5 0 0 0 5-5c0-4.4-4-8.2-9-8.2Z"/><circle cx="7.5" cy="10.5" r="1"/><circle cx="11" cy="7" r="1"/><circle cx="15.5" cy="8" r="1"/></svg>
+          <div class="service-row-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="2.5"/><circle cx="6" cy="18" r="2.5"/><line x1="20" y1="4" x2="8.5" y2="15.5"/><line x1="8.5" y1="8.5" x2="20" y2="20"/></svg>
           </div>
-          <h3>Colour &amp; Balayage</h3>
-          <p>Full colour, foils, balayage and colour correction using considered, hair-first techniques.</p>
-        </article>
-        <article class="service-card reveal">
-          <span class="service-num" aria-hidden="true">03</span>
-          <div class="service-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c2.5 3 4 5.8 4 8a4 4 0 1 1-8 0c0-2.2 1.5-5 4-8Z"/></svg>
+        </div>
+        <div class="service-row reveal">
+          <span class="service-row-num">02</span>
+          <div class="service-row-body">
+            <h3>Colour &amp; Balayage</h3>
+            <p>Full colour, foils, balayage and colour correction using considered, hair-first techniques.</p>
           </div>
-          <h3>Treatments</h3>
-          <p>Keratin smoothing, deep conditioning and repair treatments to keep hair healthy.</p>
-        </article>
-        <article class="service-card reveal">
-          <span class="service-num" aria-hidden="true">04</span>
-          <div class="service-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10 12 4l8 6-8 6-8-6Z"/><path d="M4 10v6l8 6 8-6v-6"/></svg>
+          <div class="service-row-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 1 0 0 18c1.1 0 1.6-.6 1.6-1.4 0-.4-.2-.7-.4-1-.3-.3-.4-.6-.4-1 0-.8.7-1.4 1.5-1.4H16a5 5 0 0 0 5-5c0-4.4-4-8.2-9-8.2Z"/><circle cx="7.5" cy="10.5" r="1"/><circle cx="11" cy="7" r="1"/><circle cx="15.5" cy="8" r="1"/></svg>
           </div>
-          <h3>Occasion Styling</h3>
-          <p>Blow-waves, up-styles and event-ready looks for weddings and special occasions.</p>
-        </article>
-        <article class="service-card reveal">
-          <span class="service-num" aria-hidden="true">05</span>
-          <div class="service-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c0-3.6 3.1-6.5 7-6.5s7 2.9 7 6.5"/></svg>
+        </div>
+        <div class="service-row reveal">
+          <span class="service-row-num">03</span>
+          <div class="service-row-body">
+            <h3>Treatments</h3>
+            <p>Keratin smoothing, deep conditioning and repair treatments to keep hair healthy.</p>
           </div>
-          <h3>Kids' Cuts</h3>
-          <p>Relaxed, friendly haircuts for younger clients.</p>
-        </article>
-        <article class="service-card reveal">
-          <span class="service-num" aria-hidden="true">06</span>
-          <div class="service-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5h16v10H9l-4 3.5v-3.5H4v-10Z"/></svg>
+          <div class="service-row-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c2.5 3 4 5.8 4 8a4 4 0 1 1-8 0c0-2.2 1.5-5 4-8Z"/></svg>
           </div>
-          <h3>Consultations</h3>
-          <p>Not sure what you want? Book a free chat with a stylist first.</p>
-        </article>
+        </div>
+        <div class="service-row reveal">
+          <span class="service-row-num">04</span>
+          <div class="service-row-body">
+            <h3>Occasion Styling</h3>
+            <p>Blow-waves, up-styles and event-ready looks for weddings and special occasions.</p>
+          </div>
+          <div class="service-row-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10 12 4l8 6-8 6-8-6Z"/><path d="M4 10v6l8 6 8-6v-6"/></svg>
+          </div>
+        </div>
+        <div class="service-row reveal">
+          <span class="service-row-num">05</span>
+          <div class="service-row-body">
+            <h3>Kids' Cuts</h3>
+            <p>Relaxed, friendly haircuts for younger clients.</p>
+          </div>
+          <div class="service-row-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c0-3.6 3.1-6.5 7-6.5s7 2.9 7 6.5"/></svg>
+          </div>
+        </div>
+        <div class="service-row reveal">
+          <span class="service-row-num">06</span>
+          <div class="service-row-body">
+            <h3>Consultations</h3>
+            <p>Not sure what you want? Book a free chat with a stylist first.</p>
+          </div>
+          <div class="service-row-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5h16v10H9l-4 3.5v-3.5H4v-10Z"/></svg>
+          </div>
+        </div>
       </div>
       <p class="services-note">* Services and pricing shown are indicative — please call 09 600 2608 to confirm
         availability and current pricing.</p>
     </div>
-    <svg class="section-divider" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0,20 C360,90 1080,-10 1440,40 L1440,80 L0,80 Z" fill="var(--cream)"/></svg>
   </section>
 
   <!-- HOURS -->
@@ -181,7 +189,6 @@
       <div class="reveal">
         <p class="eyebrow">Plan Your Visit</p>
         <h2>Opening Hours</h2>
-        <div class="title-ornament left" aria-hidden="true"><span class="line"></span><span class="dot"></span></div>
         <p>We're open six days a week in Epsom. Hours below reflect our latest listed schedule — if you're planning
           around a specific time, a quick call ahead is always welcome.</p>
         <div class="hero-ctas" style="justify-content:flex-start; margin-top:1.5rem;">
@@ -203,39 +210,23 @@
         <p class="hours-footnote">Thu–Sat hours confirmed. Other days may vary by appointment — please call ahead.</p>
       </div>
     </div>
-    <svg class="section-divider" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0,40 C360,-10 1080,90 1440,20 L1440,80 L0,80 Z" fill="var(--white)"/></svg>
   </section>
 
-  <!-- REVIEWS -->
-  <section class="section section-alt" id="reviews">
-    <div class="container">
-      <p class="eyebrow center">Client Love</p>
-      <h2 class="center">4.9 out of 5, from 61 reviews</h2>
-      <div class="title-ornament reveal" aria-hidden="true"><span class="line"></span><span class="dot"></span><span class="line"></span></div>
-      <div class="reviews-summary reveal">
-        <div class="reviews-score">
-          <div class="laurel-row" aria-hidden="true">
-            <svg class="laurel laurel-lg" viewBox="0 0 60 100" fill="currentColor"><path d="M55 6C40 14 32 30 32 48c0 16 8 30 8 30l4-3s-6-13-6-27c0-16 7-30 20-38l-3-4z"/><ellipse cx="45" cy="18" rx="6" ry="3" transform="rotate(-35 45 18)"/><ellipse cx="38" cy="34" rx="6" ry="3" transform="rotate(-55 38 34)"/><ellipse cx="34" cy="52" rx="6" ry="3" transform="rotate(-80 34 52)"/><ellipse cx="36" cy="70" rx="6" ry="3" transform="rotate(-100 36 70)"/></svg>
-            <div class="rating-score-lg">4.9</div>
-            <svg class="laurel laurel-lg laurel-flip" viewBox="0 0 60 100" fill="currentColor"><path d="M55 6C40 14 32 30 32 48c0 16 8 30 8 30l4-3s-6-13-6-27c0-16 7-30 20-38l-3-4z"/><ellipse cx="45" cy="18" rx="6" ry="3" transform="rotate(-35 45 18)"/><ellipse cx="38" cy="34" rx="6" ry="3" transform="rotate(-55 38 34)"/><ellipse cx="34" cy="52" rx="6" ry="3" transform="rotate(-80 34 52)"/><ellipse cx="36" cy="70" rx="6" ry="3" transform="rotate(-100 36 70)"/></svg>
-          </div>
-          <div class="stars" aria-hidden="true">★★★★★</div>
-          <p>61 Google reviews</p>
-        </div>
-        <div class="reviews-bars" aria-hidden="true">
-          <div class="bar-row"><span>5</span><div class="bar"><i data-width="92%" style="width:92%"></i></div></div>
-          <div class="bar-row"><span>4</span><div class="bar"><i data-width="6%" style="width:6%"></i></div></div>
-          <div class="bar-row"><span>3</span><div class="bar"><i data-width="1%" style="width:1%"></i></div></div>
-          <div class="bar-row"><span>2</span><div class="bar"><i data-width="0.5%" style="width:0.5%"></i></div></div>
-          <div class="bar-row"><span>1</span><div class="bar"><i data-width="0.5%" style="width:0.5%"></i></div></div>
-        </div>
+  <!-- STATEMENT / STATS -->
+  <section class="statement" id="reviews">
+    <div class="container statement-inner">
+      <p class="eyebrow eyebrow-light center reveal">Client Love</p>
+      <p class="statement-line reveal">Precision cuts. Considered colour.<br>A studio Epsom actually trusts.</p>
+      <div class="statement-stats reveal">
+        <div class="stat"><strong>4.9</strong><span>Google Rating</span></div>
+        <div class="stat"><strong>61</strong><span>Reviews</span></div>
+        <div class="stat"><strong>6</strong><span>Days Open a Week</span></div>
       </div>
       <div class="reviews-ctas reveal">
-        <a class="btn btn-outline" href="https://www.google.com/maps/dir/?api=1&destination=239+Manukau+Road%2C+Epsom%2C+Auckland+1023%2C+New+Zealand" target="_blank" rel="noopener">See Reviews on Google Maps</a>
-        <a class="btn btn-ghost" href="https://www.instagram.com/thehairlab.akl/" target="_blank" rel="noopener">Follow @thehairlab.akl</a>
+        <a class="btn btn-outline-light" href="https://www.google.com/maps/dir/?api=1&destination=239+Manukau+Road%2C+Epsom%2C+Auckland+1023%2C+New+Zealand" target="_blank" rel="noopener">See Reviews on Google Maps</a>
+        <a class="btn btn-ghost-light" href="https://www.instagram.com/thehairlab.akl/" target="_blank" rel="noopener">Follow @thehairlab.akl</a>
       </div>
     </div>
-    <svg class="section-divider" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0,20 C360,90 1080,-10 1440,40 L1440,80 L0,80 Z" fill="var(--cream)"/></svg>
   </section>
 
   <!-- CONTACT / LOCATION -->
@@ -244,7 +235,6 @@
       <div class="contact-info reveal">
         <p class="eyebrow">Visit Us</p>
         <h2>Find &amp; Book</h2>
-        <div class="title-ornament left" aria-hidden="true"><span class="line"></span><span class="dot"></span></div>
 
         <ul class="contact-list">
           <li>
@@ -284,7 +274,6 @@
         </iframe>
       </div>
     </div>
-    <svg class="section-divider" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0,40 C360,-10 1080,90 1440,20 L1440,80 L0,80 Z" fill="var(--white)"/></svg>
   </section>
 
   <!-- MESSAGE FORM -->
@@ -292,7 +281,6 @@
     <div class="container">
       <p class="eyebrow center">Get In Touch</p>
       <h2 class="center">Send Us a Message</h2>
-      <div class="title-ornament reveal" aria-hidden="true"><span class="line"></span><span class="dot"></span><span class="line"></span></div>
       <p class="section-lede center">Prefer not to call? Send us your details and we'll get back to you.</p>
 
       <form class="contact-form reveal" id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
@@ -316,7 +304,6 @@
         <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
       </form>
     </div>
-    <svg class="section-divider" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0,20 C360,90 1080,-10 1440,40 L1440,80 L0,80 Z" fill="var(--ink)"/></svg>
   </section>
 
 </main>
