@@ -21,6 +21,71 @@ document.addEventListener("DOMContentLoaded", function () {
     yearEl.textContent = new Date().getFullYear();
   }
 
+  var todayRow = document.querySelector('.hours-table tr[data-day="' + new Date().getDay() + '"]');
+  if (todayRow) {
+    todayRow.classList.add("today");
+  }
+
+  var revealTargets = document.querySelectorAll(".reveal");
+  if ("IntersectionObserver" in window && revealTargets.length) {
+    var revealObserver = new IntersectionObserver(
+      function (entries, observer) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("in-view");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15, rootMargin: "0px 0px -40px 0px" }
+    );
+    revealTargets.forEach(function (el) {
+      revealObserver.observe(el);
+    });
+  } else {
+    revealTargets.forEach(function (el) {
+      el.classList.add("in-view");
+    });
+  }
+
+  var reviewBars = document.querySelectorAll(".bar i[data-width]");
+  reviewBars.forEach(function (bar) {
+    bar.style.width = "0";
+  });
+  if ("IntersectionObserver" in window && reviewBars.length) {
+    var barObserver = new IntersectionObserver(
+      function (entries, observer) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.style.width = entry.target.getAttribute("data-width");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.4 }
+    );
+    reviewBars.forEach(function (bar) {
+      barObserver.observe(bar);
+    });
+  } else {
+    reviewBars.forEach(function (bar) {
+      bar.style.width = bar.getAttribute("data-width");
+    });
+  }
+
+  // Safety net: guarantee everything is visible even if a scroll-triggered
+  // observer never fires (fast scrollers, crawlers, odd viewport states).
+  setTimeout(function () {
+    revealTargets.forEach(function (el) {
+      el.classList.add("in-view");
+    });
+    reviewBars.forEach(function (bar) {
+      if (bar.style.width === "0px" || bar.style.width === "0") {
+        bar.style.width = bar.getAttribute("data-width");
+      }
+    });
+  }, 2500);
+
   var form = document.getElementById("contactForm");
   var status = document.getElementById("formStatus");
   if (form && status) {

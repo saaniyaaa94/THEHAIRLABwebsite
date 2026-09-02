@@ -213,7 +213,25 @@ p { margin: 0 0 1em; color: var(--ink-soft); }
     radial-gradient(60% 55% at 85% 10%, rgba(107, 74, 53, 0.14), transparent 60%),
     radial-gradient(70% 60% at 10% 90%, rgba(27, 22, 19, 0.08), transparent 60%),
     linear-gradient(180deg, var(--blush) 0%, var(--cream) 75%);
+  background-size: 140% 140%, 140% 140%, 100% 100%;
+  animation: driftGlow 22s ease-in-out infinite alternate;
   z-index: -1;
+}
+@keyframes driftGlow {
+  0% { background-position: 0% 0%, 100% 100%, 0 0; }
+  100% { background-position: 15% 10%, 85% 90%, 0 0; }
+}
+.hero-flourish {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: min(900px, 140vw);
+  height: auto;
+  transform: translate(-50%, -50%);
+  color: var(--rose);
+  opacity: 0.08;
+  z-index: -1;
+  pointer-events: none;
 }
 .hero-inner { text-align: center; max-width: 780px; }
 .hero h1 {
@@ -265,8 +283,45 @@ p { margin: 0 0 1em; color: var(--ink-soft); }
 }
 
 /* ---------- Sections ---------- */
-.section { padding: 5rem 0; }
+.section { padding: 5rem 0; scroll-margin-top: 84px; }
 .section-alt { background: var(--white); }
+
+/* Ornamental title divider */
+.title-ornament {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  margin: 0.9rem 0 1.6rem;
+}
+.title-ornament.left { justify-content: flex-start; }
+.title-ornament .line {
+  width: 34px;
+  height: 1px;
+  background: var(--blush-deep);
+}
+.title-ornament .dot {
+  width: 6px;
+  height: 6px;
+  background: var(--rose);
+  transform: rotate(45deg);
+  flex-shrink: 0;
+}
+
+/* Scroll-reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+  .hero-bg { animation: none; }
+}
 
 /* About */
 .about-grid {
@@ -319,10 +374,31 @@ p { margin: 0 0 1em; color: var(--ink-soft); }
   border: 1px solid var(--line);
   border-radius: var(--radius);
   padding: 1.75rem;
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
-.service-card:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
-.service-icon { font-size: 1.8rem; margin-bottom: 0.7rem; }
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+  border-color: var(--blush-deep);
+}
+.service-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: var(--blush);
+  color: var(--rose);
+  margin-bottom: 1rem;
+  transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease;
+}
+.service-icon svg { width: 22px; height: 22px; }
+.service-card:hover .service-icon {
+  background: var(--rose);
+  color: var(--white);
+  transform: scale(1.06);
+}
 .service-card h3 { font-size: 1.15rem; margin-bottom: 0.4em; }
 .service-card p { margin: 0; font-size: 0.93rem; }
 .services-note {
@@ -358,6 +434,23 @@ p { margin: 0 0 1em; color: var(--ink-soft); }
 .hours-table td { color: var(--ink-soft); text-align: right; }
 .hours-table tr:last-child th, .hours-table tr:last-child td { border-bottom: none; }
 .hours-table tr.confirmed th, .hours-table tr.confirmed td { color: var(--rose-dark); font-weight: 700; }
+.hours-table tr.today th, .hours-table tr.today td {
+  position: relative;
+}
+.hours-table tr.today {
+  background: var(--blush);
+}
+.hours-table tr.today th::before {
+  content: "Today";
+  position: absolute;
+  top: -0.65rem;
+  left: 0.4rem;
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--rose);
+  font-weight: 700;
+}
 .hours-footnote { font-size: 0.8rem; margin: 1rem 0 0; color: var(--ink-soft); }
 
 /* Reviews */
@@ -374,7 +467,14 @@ p { margin: 0 0 1em; color: var(--ink-soft); }
 .bar-row { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.4rem; font-size: 0.85rem; color: var(--ink-soft); }
 .bar-row span { width: 0.8rem; }
 .bar { flex: 1; height: 8px; background: var(--line); border-radius: 999px; overflow: hidden; }
-.bar i { display: block; height: 100%; background: var(--gold); border-radius: 999px; }
+.bar i {
+  display: block;
+  height: 100%;
+  width: 0;
+  background: var(--gold);
+  border-radius: 999px;
+  transition: width 1.1s cubic-bezier(0.22, 1, 0.36, 1);
+}
 .reviews-ctas { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
 
 /* Contact */
